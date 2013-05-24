@@ -11,7 +11,7 @@ groups:
         - modifyworld.*
         prefix: '&e'
         options:
-            build: false
+            build: true
             rank: '1000'
     Builder:
         permissions:
@@ -34,7 +34,6 @@ groups:
         - essentials.mail.send
         - essentials.me
         - essentials.msg
-        - essentials.nick
         - essentials.pay
         - essentials.ping
         - essentials.powertool
@@ -64,8 +63,49 @@ groups:
         options:
             build: true
             rank: '500'
-    Moderator:
+    Apprentice
+        - essentials.warp.list
+        inheritance
+        - builder
+        prefix: 'Apprentice'
+        options
+            build: true
+            rank: '500'
+    Engineer
+        - essentials.nick
+        - worldedit.wand
+    - worldedit.region.set
+    - worldedit.superpickaxe
+    - worldedit.history.undo
+    - worldedit.history.redo
+    - worldedit.region.walls
+    - worldedit.region.replace
+    - worldedit.wand.toggle
+    - worldedit.selection.hpos
+    - worldedit.selection.hpos1
+    - worldedit.selection.hpos2
+    - worldedit.selection.pos
+    - worldedit.selection.pos1
+    - worldedit.selection.pos2
+    - worldedit.selection.expand
+    - worldedit.navigation.unstuck
+    - worldedit.navigation.ascend
+    - worldedit.navigation.descend
+    - worldedit.navigation.thru
+    - worldedit.navigation.jumpto
+    - worldedit.navigation.ceiling
+    - worldedit.navigation.up
+    inheritance:
+     - engineer
+        prefix: '&5'
+        options:
+            build: true
+            rank: '200'
+    
+    
+   Moderator:
         permissions:
+        - voxelsniper.sniper
         - essentials.ban
         - essentials.ban.notify
         - essentials.banip
@@ -114,7 +154,7 @@ groups:
         - permissions.user.demote.default
         - permissions.manage.membership
         inheritance:
-        - builder
+        - engineer
         prefix: '&5'
         options:
             build: true
